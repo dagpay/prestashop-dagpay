@@ -102,7 +102,6 @@ class Dagpay extends PaymentModule
         $order_invalid->logable = 0;
         $order_invalid->save();
 
-        с
 
         return parent::install() &&
             $this->registerHook('paymentOptions') &&
