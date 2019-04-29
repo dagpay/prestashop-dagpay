@@ -24,6 +24,6 @@ After installing and activating the Dagpay extension in your PrestaShop Admin Pa
 2. Add your environment Name, Description and choose your Wallet for receiving payments.
 3. Add the status URL for server-to-server communication and redirect URLs.
 * The status URL for PrestaShop is https://`store_base_path`?fc=module&module=dagpay&controller=callback ( change `store_base_path` with your store domain address, for example https://myprestashopstore.com?fc=module&module=dagpay&controller=callback;
-Redirect URLs to redirect back to your store from the payment view depending on the final outcome of the transaction (can be set the same for all states). For example https://myprestashopstore.com/success/
-Save the environment and copy the generated environment ID, user ID and secret keys and in your PrestaShop Admin panel navigate to the **Installed modules** section, enable the Dagpay payment gateway and enter the keys to the corresponding fields.
-Save the changes and Dagpay should be working on your PrestaShop store.
+* Redirect URLs to redirect back to your store from the payment view depending on the final outcome of the transaction (can be set the same for all states). For example https://myprestashopstore.com/success/
+4. Save the environment and copy the generated environment ID, user ID and secret keys and in your PrestaShop Admin panel navigate to the **Installed modules** section, enable the Dagpay payment gateway and enter the keys to the corresponding fields.
+5. Save the changes and Dagpay should be working on your PrestaShop store.
