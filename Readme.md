@@ -12,9 +12,9 @@ Dagpay helps you to accept lightning fast dagcoin payments directly from your eC
 
 ## Installation
 
-1. Download the [PrestaShop module .zip file](https://github.com/dagpay/prestashop-dagpay/releases/download/v1.0.0/prestashop-dagpay.zip)
+1. Download the [PrestaShop module .zip file](https://github.com/dagpay/prestashop-dagpay/releases/download/v1.0.0/prestashop-dagpay.zip);
 2. Open **Installed modules** tab;
-3. Click **Upload module** and select the downloaded extension .zip file;
+3. Click **Upload module** and select the downloaded extension .zip file.
 
 ## Setup & Configuration
 
