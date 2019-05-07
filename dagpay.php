@@ -101,7 +101,11 @@ class Dagpay extends PaymentModule
         $order_invalid->unremovable = false;
         $order_invalid->logable = 0;
         $order_invalid->save();
-
+        
+        Configuration::updateValue('DAGPAY_PENDING', $order_pending->id);
+        Configuration::updateValue('DAGPAY_EXPIRED', $order_expired->id);
+        Configuration::updateValue('DAGPAY_WAITING', $order_confirming->id);
+        Configuration::updateValue('DAGPAY_FAILED', $order_invalid->id);
 
         return parent::install() &&
             $this->registerHook('paymentOptions') &&
@@ -249,8 +253,7 @@ class Dagpay extends PaymentModule
         $externalOption = new PaymentOption();
         $externalOption->setModuleName($this->name)
                ->setCallToActionText($this->l('Dagpay'))
-               ->setAction($this->context->link->getModuleLink($this->name, 'redirect', array(), true))
-               ->setAdditionalInformation($this->fetch('module:dagpay/views/templates/admin/template_3.tpl'));
+               ->setAction($this->context->link->getModuleLink($this->name, 'redirect', array(), true));
 
         $this->smarty->assign('status', 'ok');
         $paymentOptions = array($externalOption);
